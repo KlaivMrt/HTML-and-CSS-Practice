@@ -1,0 +1,59 @@
+/* Utilities */
+
+.l-heading {
+    text-align: center;
+}
+
+/* Navbar */
+
+#navbar .logo {
+    float: none;
+    text-align: center;
+    padding-top: 15px;
+}
+
+#navbar ul,
+#navbar ul li {
+    float: none;
+}
+
+#navbar ul li a {
+    padding: 5px;
+    border-bottom: #444 dotted 1px;
+}
+
+/* Home Info */
+
+#home-info {
+    height: 335px;
+}
+
+#home-info .info-img {
+    display: none;
+}
+
+#home-info .info-content {
+    float: none;
+    width: 100%;
+}
+
+/* Features */
+
+.box {
+    float: none;
+    width: 100%;
+}
+
+/* About Info */
+
+#about-info .info-right,
+#about-info .info-left {
+    float: none;
+    width: 100%;
+}
+
+/* Contact Us */
+
+#contact-info .box {
+    border-bottom: #444 dotted 1px;
+}
