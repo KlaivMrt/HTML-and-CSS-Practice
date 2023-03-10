@@ -6,15 +6,48 @@
 
 /* Navbar */
 
+#navbar #toggler {
+    visibility: visible;
+    opacity: 0;
+}
+
+#navbar #img-lines {
+    visibility: visible;
+}
+
 #navbar .logo {
     float: none;
-    text-align: center;
+    text-align: right;
     padding-top: 15px;
 }
 
 #navbar ul,
 #navbar ul li {
     float: none;
+}
+
+#navbar ul li {
+    margin-bottom: 35px;
+}
+
+#navbar ul li:last-child {
+    margin-bottom: 5px;
+}
+
+#navbar ul {
+    position: absolute;
+    width: 150px;
+    transition-property: all;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+    transform: translateX(-800px);
+    opacity: 0;
+    z-index: 10;
+}
+
+#navbar ul.show {
+    transform: none;
+    opacity: 1;
 }
 
 #navbar ul li a {
