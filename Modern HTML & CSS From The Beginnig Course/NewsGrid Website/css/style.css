@@ -50,6 +50,11 @@ ul {
     list-style: none;
 }
 
+p {
+    margin: 0.5rem 0;
+    text-align: justify;
+}
+
 img {
     width: 100%;
 }
@@ -119,7 +124,7 @@ h6 {
     background: var(--secondary-color);
 }
 
-.btn-bloc {
+.btn-block {
     display: block;
     width: 100%;
     text-align: center;
@@ -188,6 +193,32 @@ h6 {
     padding: 3rem;
 }
 
+.list li {
+    padding: 0.5rem 0;
+    border-bottom: #555 dotted 1px;
+}
+
+.list li a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Inner page grid container */
+
+.page-container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 1.25rem;
+}
+
+.page-container>*:first-child {
+    grid-row: 1 / span 3;
+}
+
+.l-heading {
+    margin: 1.2rem 0;
+    font-size: 3rem;
+}
+
 /* Navigation */
 
 #main-nav {
@@ -212,7 +243,6 @@ h6 {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    /* gap: 5px; */
 }
 
 #main-nav ul li a {
@@ -240,6 +270,7 @@ h6 {
 }
 
 /* Showcase */
+
 #showcase {
     color: #fff;
     background: var(--dark-color);
@@ -258,8 +289,6 @@ h6 {
     opacity: 0.5;
     z-index: 2;
 }
-
-
 
 #showcase .showcase-container {
     display: grid;
@@ -296,4 +325,53 @@ h6 {
 
 #home-articles .articles-container>*:last-child {
     grid-column: 2 / span 2;
+}
+
+#article .meta {
+    display: grid;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+    padding: 0.5rem;
+}
+
+/* Footer */
+
+#main-footer {
+    background: var(--dark-color);
+    color: #fff;
+    padding: 1.25rem 0;
+}
+
+#main-footer img {
+    width: 150px;
+}
+
+#main-footer a {
+    color: #fff;
+}
+
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+#main-footer .footer-container>*:last-child {
+    background: #444;
+    grid-column: 1 / span 4;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+#main-footer .footer-container input[type="email"] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type="submit"] {
+    width: 90%;
 }
