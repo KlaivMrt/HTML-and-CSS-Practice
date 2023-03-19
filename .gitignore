@@ -1,0 +1,7 @@
+# ignores all directories named
+scss/
+node_modules/
+
+#ignores all files named
+package.json
+package-lock.json
