@@ -1,6 +1,7 @@
 # ignores all directories named
 scss/
 node_modules/
+.vscode/
 
 #ignores all files named
 package.json
