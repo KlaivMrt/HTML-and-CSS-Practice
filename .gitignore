@@ -2,7 +2,8 @@
 # scss/
 node_modules/
 .vscode/
+dist/
 
 #ignores all files named
-# package.json
-# package-lock.json
+package.json
+package-lock.json
