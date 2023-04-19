@@ -1,0 +1,51 @@
+.container {
+    margin: auto;
+    max-width: 1000px;
+    overflow: hidden;
+}
+
+.btn {
+    display: inline/block;
+
+    &-light {
+        text-decoration: none;
+        padding: .5rem 1.5rem;
+        border-radius: 5px;    
+        background: $light-gray;
+        color: $dark-gray;
+
+        &:hover {
+            background: $medium-gray;
+            color: $primary-colour;
+        }
+    }
+
+    &-dark {
+        text-decoration: none;
+        padding: .5rem 1.5rem;
+        border-radius: 5px;    
+        background: $dark-gray;
+        color: #fff;
+    
+        &:hover {
+            background: $medium-gray;
+            color: $primary-colour;
+            border: none;
+        }
+    }
+
+}
+
+.text-primary {
+    color: $primary-colour;
+}
+
+.bg {    
+    &-primary {
+        background: $primary-colour;
+    }
+
+    &-light {
+        background: $light-gray;
+    }
+}

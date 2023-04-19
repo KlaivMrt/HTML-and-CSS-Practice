@@ -1,6 +1,18 @@
+$dark-gray: #333;
+$medium-gray: #444;
+$primary-colour: #f7c08a;
+$light-gray: #f4f4f4;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@function primaryTurn() {
+    
+}
