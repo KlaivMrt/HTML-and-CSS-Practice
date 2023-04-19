@@ -1,3 +1,4 @@
+import "../scss/contact.scss"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
