@@ -1,0 +1,13 @@
+@import "config";      // 1#
+@import "utilities";   // 2#
+@import "general";     // 3#
+
+#contact {
+    &-form {
+        // height: 500px;
+    }
+    
+    &-info {
+        height: 500px;
+    }
+}
