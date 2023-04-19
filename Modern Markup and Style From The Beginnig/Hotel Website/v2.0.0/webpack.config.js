@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "[name].js"
+        filename: "scripts/[name].js"
     },
     devServer: {
         static: {
@@ -25,22 +25,40 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.scss$/i,
                 use: ["style-loader", "css-loader", "sass-loader"]
             },
-            // {
-            //     test: /[\.jpg]$/,
-            //     use: ["file-loader"]
-            // }
+            //TODO: search for a way to organise the images to a file
+            {
+                test: /[\.(jpg|png)]$/,
+                use: [
+                {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]",   // keep the original name and extention
+                        outputPath: "img/",     // specifies the outputfile
+                        publicPath: "img/"  // specifies the source file of the images
+                    }
+                },
+                // {
+                //     loader: "url-loader",
+                //     options: {
+                //         name: "[name].[ext]",   // keep the original name and extention
+                //         outputPath: "img/",     // specifies the outputfile
+                //         publicPath: "src/img/"  // specifies the source file of the images
+                //     }
+                // }
+            ]
+            }
         ]
     },
     plugins: [].concat(
         ["index", "about", "contact"].map( (file) => 
             new htmlWebpackPlugin({
                 inject: true,
-                filename: `${file}.html`,
-                template: `./src/${file}.html`,
-                chunks: [file]
+                filename: `${file}.html`,           // the file that will be generated
+                template: `./src/${file}.html`,     // the source of that file
+                chunks: [file]                      // the js files that will be included within that file
             })
         )
     )
