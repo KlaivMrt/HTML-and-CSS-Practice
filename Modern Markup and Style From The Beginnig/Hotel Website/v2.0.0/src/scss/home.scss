@@ -3,14 +3,10 @@
 @import "general";     // 3#
 
 header {
-    // background-color: $dark-colour;
 
     #showcase {
         transition: all;
-        background-repeat: no-repeat;
-        background-position: center;
         position: relative;
-        // height: 96vh;
         color: #fff;
         text-align: center;
 
@@ -34,18 +30,6 @@ header {
             justify-content: center;
             z-index: 10;
         }
-
-        // &:before {
-        //     content: "";
-        //     position: absolute;
-        //     background: $dark-gray;
-        //     top: 0;
-        //     left: 0;
-        //     height: 100%;
-        //     width: 100%;
-        //     opacity: .6;
-        //     z-index: 5;
-        // }
     }
 
     .showcase-overlay {
@@ -58,15 +42,15 @@ header {
         z-index: 5;
 
         animation-name: opacityControl;
-        animation-duration: 2s;
+        animation-duration: 4s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
         animation-timing-function: ease-in-out;
     }
 
     @keyframes opacityControl {
-        from {opacity: .99;}
-        to {opacity: .45;}
+        from {opacity: .9999;}
+        to {opacity: .4;}
     }
 }
 
@@ -87,7 +71,6 @@ header {
             width: 50%;
             text-align: center;
             padding: 4.5rem 1rem 0 1rem;
-            // padding-top: 4.5rem;
 
             h2 {
                 margin-bottom: 1rem;
@@ -106,7 +89,6 @@ header {
     height: 200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: stretch;
     
     .box {
         text-align: center;
@@ -118,4 +100,39 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    header {
+        
+        #showcase {
 
+            &-content {
+                h1 {
+                    margin-bottom: 1.5rem;
+                    font-size: 2.85rem;
+                }
+            }
+            
+            .container { 
+                height: 60vh;
+            }
+        }
+    }
+    
+    #home-info{
+        display: block;
+
+        .info {
+            &-img {
+                display: none;
+            }
+    
+            &-content {
+                width: 100%;
+            }
+        }
+    }
+    
+    #features {
+        display: block;
+    }
+}

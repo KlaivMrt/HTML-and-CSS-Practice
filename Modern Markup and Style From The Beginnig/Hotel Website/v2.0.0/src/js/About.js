@@ -5,6 +5,9 @@ import TestimonialsHandler from "./TestimonialsHandler";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
+/**
+ * Handles the about.html page
+ */
 class About {
     #navEl;
     #tHandler;
@@ -17,6 +20,9 @@ class About {
         document.getElementById("testimonials").style.background = `url(${img2}) no-repeat center center/cover`;
     }
 
+    /**
+     * Renders all necessary elements to the DOM
+     */
     render = () => {
         this.#tHandler.insertFront({
             name: "Sammy",

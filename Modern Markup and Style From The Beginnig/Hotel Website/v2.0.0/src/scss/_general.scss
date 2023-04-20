@@ -9,6 +9,28 @@
         height: 3rem;
     }
 
+    #toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 40px;
+        height: 40px;
+        margin: 10px 0 0 10px;
+        opacity: 0;
+        visibility: hidden;    
+    }
+
+    #img-lines {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        z-index: 1;
+        margin: .5rem 0 0 .5rem;
+        visibility: hidden;
+    }
+
     .logo {
         color: $primary-colour;
 
@@ -20,7 +42,11 @@
     &-menu {
         width: 30%;
         height: 100%;
-        
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         a {
             text-decoration: none;
             color: #fff;
@@ -37,18 +63,57 @@
                 color: $primary-colour;
             }
         }
-        
-        list-style: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
     }
 }
 
 footer {
     background: $dark-gray;
     color: #fff;
-    align-items: center;
     text-align: center;
     padding: 1.3rem 0;
+}
+
+@media (max-width: 768px) {
+
+    #navbar {
+        position: relative;
+        z-index: 20;
+        
+        .container {
+            justify-content: end;
+            height: 3.5rem;
+        }
+        
+        #toggler {
+            visibility: visible;
+        }
+
+        #img-lines {
+            visibility: visible;
+        }
+
+        &-menu {
+            position: absolute;
+            width: 10rem;
+            height: 9rem;
+            top: 70px;
+            transition-property: all;
+            transition-duration: .85s;
+            transition-timing-function: ease-in-out;
+            transform: translateY(-10px);
+            opacity: 0;
+            z-index: 10;
+            display: block;
+            background-color: $dark-gray;
+
+            li {
+                display: block;
+            }
+
+            &.show {
+                transform: none;
+                opacity: 1;
+            }
+        }
+    }
 }

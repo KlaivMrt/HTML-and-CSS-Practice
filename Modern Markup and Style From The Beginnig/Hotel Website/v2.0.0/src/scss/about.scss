@@ -5,7 +5,7 @@
 
 #about-info {
     padding: 1rem 0;
-    height: 50vh;
+    height: 300px;
     display: flex;
     flex-direction: column;
     
@@ -25,6 +25,11 @@
     text-align: center;
     overflow: hidden;
     padding: 1rem 0;
+
+    h2 {
+        color: #fff;
+        margin-bottom: 1rem;
+    }
     
     .container {
         display: grid;
@@ -41,4 +46,17 @@
             justify-content: space-around;
         }
     }
+}
+
+@media (max-width: 768px) {
+    #about-info {
+        .container {
+            display: block;
+        }
+        
+        .info-right{
+            display: none;
+        }
+    }
+
 }

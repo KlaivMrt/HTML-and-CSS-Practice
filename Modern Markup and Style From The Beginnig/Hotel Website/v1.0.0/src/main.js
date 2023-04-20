@@ -1,5 +1,5 @@
-navbar_menu = document.getElementById("navbar-menu");
-toggler = document.querySelector("#toggler");
+const navbar_menu = document.getElementById("navbar-menu");
+const toggler = document.querySelector("#toggler");
 
 const uncheck = () => {
     if (toggler.checked) {

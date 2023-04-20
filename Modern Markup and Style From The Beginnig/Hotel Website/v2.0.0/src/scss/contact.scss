@@ -4,10 +4,66 @@
 
 #contact {
     &-form {
-        // height: 500px;
+
+        .container {
+            form {
+
+                .form-group{
+                    margin-bottom: 2rem;
+                    
+                    label {
+                        display: block;
+                    }
+
+                    input, textarea {
+                        width: 100%;
+                        // border-radius: 5px;
+                        border: $light-gray 2px solid;
+                        padding: 10px;
+                    }
+
+                    input:focus, textarea:focus {
+                        outline: none;
+                        border-color: $primary-colour;
+                    }
+
+                    textarea {
+                        height: 200px;
+                        resize: none;
+                    }
+                }
+
+                button {
+                    padding: .65rem 4.5rem;
+                }
+            }
+        }
     }
     
     &-info {
-        height: 500px;
+        height: 300px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background: $medium-gray;
+        color: white;
+        text-align: center;
+        margin-top: 1rem;
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    #contact-info {
+        display: block;
+
+        .box {
+            height: 33.3%;
+        }
     }
 }

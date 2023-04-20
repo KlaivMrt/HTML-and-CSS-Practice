@@ -1,5 +1,9 @@
+import line from "../img/line.png";
 import UtilEl from "./Utilities";
 
+/**
+ * Generates the navbar
+ */
 class Navbar {
 
     static #logo() {
@@ -56,11 +60,33 @@ class Navbar {
         return navList;
     }
 
+    static #showHandler(e) {
+        const toggler = document.getElementById("toggler");
+        const navbar_menu = document.getElementById("navbar-menu");
+        
+        if(toggler.checked) {
+            navbar_menu.classList.add("show");
+        } else {
+            navbar_menu.classList.remove("show");
+        }
+    }
+
     static generate(current) {
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.id = "toggler";
+        checkbox.addEventListener("click", this.#showHandler)
+
+        const lines = document.createElement("img");
+        lines.src = line;
+        lines.id="img-lines";
+
         const logoEl = this.#logo();
         const nav = this.#navList(current);
 
         const container = UtilEl.container();
+        container.appendChild(checkbox);
+        container.appendChild(lines);
         container.appendChild(logoEl);
         container.appendChild(nav);
 
