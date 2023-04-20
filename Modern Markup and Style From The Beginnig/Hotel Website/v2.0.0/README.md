@@ -1,0 +1,1 @@
+A hotel website created using webpack module bundler. (front-end)
